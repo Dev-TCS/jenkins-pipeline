@@ -1,13 +1,13 @@
 def CONTAINER_NAME="jenkins-pipeline"
 def CONTAINER_TAG="latest"
-def DOCKER_HUB_USER="hakdogan"
+def DOCKER_HUB_USER="devtcs"
 def HTTP_PORT="8090"
 
 node {
 
     stage('Initialize'){
-        def dockerHome = tool 'myDocker'
-        def mavenHome  = tool 'myMaven'
+        def dockerHome = tool 'devtcs'
+        def mavenHome  = tool 'Dev-MVN'
         env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
     }
 
